@@ -1,0 +1,34 @@
+# @see https://www.electron.build/configuration/configuration
+---
+appId: br.heliomarpm.elvvqs
+productName: Electron VueVite - Quick Start
+copyright: Copyright © 2023 — ${author}
+artifactName: ${name}_Setup_v${version}_${os}-${arch}.${ext}
+asar: true
+
+portable: 
+  artifactName: ${name}_Portable-v${version}_${os}-${arch}.${ext}
+
+directories: 
+  buildResources: src/assets/icons
+  output: dist
+
+files:
+  - build
+  
+mac: 
+  category: public.app-category.utilities
+
+win:
+  target: 
+    - nsis
+    - portable
+  
+linux:
+  category: Utility
+  target:
+    - AppImage
+    - deb
+    - freebsd
+    - rpm
+  
