@@ -1,6 +1,6 @@
 <span id="top"></span>
 <h1 align="center">
-  <!-- <img src="https://user-images.githubusercontent.com/13087389/126053559-d4c7d080-0ad3-4deb-83dd-2a52b209e5f2.png" width="128" /> -->
+  <img src="./public/logo.png" alt="electron-vue" width="428" />
   <br> Electron Quick Start - Vue+Vite+TypeScript+Sass
 
   ![CodeQL](https://github.com/heliomarpm/electron-vuevite-quick-start/actions/workflows/codeql-analysis.yml/badge.svg) ![Publish](https://github.com/heliomarpm/electron-vuevite-quick-start/actions/workflows/publish.yml/badge.svg) <a href="https://navto.me/heliomarpm" target="_blank"><img src="https://navto.me/assets/navigatetome-brand.png" width="32"/></a>
