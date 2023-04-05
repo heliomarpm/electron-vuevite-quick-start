@@ -1,6 +1,6 @@
 const { writeFile } = require('fs/promises')
 const { resolve } = require('path')
-const open = require('open')
+const { shell } = require('electron')
 
 const { extractOwnerAndRepoFromGitRemoteURL } = require('./utils')
 const { checkValidations } = require('./validations')
@@ -55,13 +55,13 @@ async function makeRelease() {
       `${COLORS.CYAN}> Opening the repository releases page...${COLORS.RESET}`
     )
 
-    await open(`https://github.com/${ownerAndRepo}/releases`)
+    await shell.openExternal(`https://github.com/${ownerAndRepo}/releases`)
 
     console.log(
       `${COLORS.CYAN}> Opening the repository actions page...${COLORS.RESET}`
     )
 
-    await open(`https://github.com/${ownerAndRepo}/actions`)
+    await shell.openExternal(`https://github.com/${ownerAndRepo}/actions`)
 
     console.log(`\n${COLORS.GREEN}Done!${COLORS.RESET}\n`)
   } catch ({ message }) {
