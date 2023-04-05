@@ -29,6 +29,6 @@ linux:
   target:
     - AppImage
     - deb
-    - freebsd
     - rpm
+    # - freebsd
   
