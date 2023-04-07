@@ -15,6 +15,9 @@ console.log("[App.vue]", `Hello world from Electron ${process.versions.electron}
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+    <a href="https://www.typescriptlang.org/" target="_blank">
+      <img src="./assets/ts.png" class="logo ts" alt="TS logo" width="110"/>
+    </a>
   </div>
   <HelloWorld msg="Electron + Vite + Vue(TS)" />
   <div class="flex-center">
@@ -24,16 +27,32 @@ console.log("[App.vue]", `Hello world from Electron ${process.versions.electron}
 </template>
 
 <style scoped>
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.logo.electron:hover {
+  filter: drop-shadow(0 0 2em #9feaf9);
 }
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #9d5bfe);
+}
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+.logo.ts:hover {
+  filter: drop-shadow(0 0 2em #2d79c7);
+}
+
 </style>
