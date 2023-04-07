@@ -5,6 +5,13 @@
 
   ![CodeQL](https://github.com/heliomarpm/electron-vuevite-quick-start/actions/workflows/codeql-analysis.yml/badge.svg) ![Publish](https://github.com/heliomarpm/electron-vuevite-quick-start/actions/workflows/publish.yml/badge.svg) <a href="https://navto.me/heliomarpm" target="_blank"><img src="https://navto.me/assets/navigatetome-brand.png" width="32"/></a>
 
+  ![electron version](https://img.shields.io/github/package-json/dependency-version/heliomarpm/electron-vuevite-quick-start/dev/electron)
+  ![electron builder version](https://img.shields.io/github/package-json/dependency-version/heliomarpm/electron-vuevite-quick-start/dev/electron-builder)
+  ![vite version](https://img.shields.io/github/package-json/dependency-version/heliomarpm/electron-vuevite-quick-start/dev/vite)
+  ![vue version](https://img.shields.io/github/package-json/dependency-version/heliomarpm/electron-vuevite-quick-start/vue)
+  ![typescript version](https://img.shields.io/github/package-json/dependency-version/heliomarpm/electron-vuevite-quick-start/dev/typescript)
+  ![electron vite version](https://img.shields.io/github/package-json/dependency-version/heliomarpm/electron-vuevite-quick-start/dev/sass)
+  
 </h1>
 
 <p align="center">
