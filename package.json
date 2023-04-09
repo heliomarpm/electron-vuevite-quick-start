@@ -6,9 +6,29 @@
   "main": "build/electron/main.js",
   "author": {
     "name": "Heliomar P. Marques",
-    "email": "heliomarpm@proton.me"
+    "email": "heliomarpm@proton.me",
+    "url": "https://navto.me/heliomarpm"
   },
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heliomarpm/electron-vuevite-quick-start.git"
+  },
+  "bugs": {
+    "url": "https://github.com/heliomarpm/electron-vuevite-quick-start/issues"
+  },
+  "homepage": "https://github.com/heliomarpm/electron-vuevite-quick-start#readme",
+  "keywords": [
+    "electron",
+    "electron-quick-start",
+    "electron-app",
+    "electron-vue",
+    "electron-vite",
+    "electron-builder",
+    "vuejs", "vue3", "vitejs"
+  ],
+
   "scripts": {
     "start": "npm run dev",
     "dev": "vite dev",
