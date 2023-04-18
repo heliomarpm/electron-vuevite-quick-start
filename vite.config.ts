@@ -1,17 +1,19 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import electron from 'vite-plugin-electron'
 import renderer from 'vite-plugin-electron-renderer'
 import { rmSync } from 'node:fs'
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command }) => {
+export default defineConfig(({ command, mode }) => {
   rmSync('build/electron', { recursive: true, force: true })
 
   const isServe = command === 'serve'
   const isBuild = command === 'build'
   const sourcemap = isServe || !!process.env.VSCODE_DEBUG
 
+  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+  
   return {
     server: {
       port: 3678
@@ -73,3 +75,5 @@ export default defineConfig(({ command }) => {
     }
   }
 })
+
+
