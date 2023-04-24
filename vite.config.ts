@@ -18,6 +18,18 @@ export default defineConfig(({ command, mode }) => {
     server: {
       port: 3678
     },
+    resolve: {
+      alias: {
+        "@": `${__dirname}/src`,
+      },
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "src/styles/variables.scss";'
+        }
+      }
+    },
     build: {
       outDir: 'build/app',
       emptyOutDir: true,
@@ -66,12 +78,6 @@ export default defineConfig(({ command, mode }) => {
       renderer(),
     ],
     clearScreen: true,
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "src/styles/variables.scss";'
-        }
-      }
-    }
+    
   }
 })
