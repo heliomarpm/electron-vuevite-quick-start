@@ -93,9 +93,46 @@ function useLoading() {
 const { appendLoading, removeLoading } = useLoading()
 domReady().then(appendLoading)
 
-window.onmessage = (ev) => {
-    ev.data.payload === 'removeLoading' && removeLoading()
-}
 
-setTimeout(removeLoading, 4000)
+/**  ---------- Remove Loading ----------- */
+// Control variables to remove Loading
+let appLoaded = false;
+let timeout = false;
+
+/**
+ * Set a timeout for loading the application and 
+ * call the removeLoading function if the application is already loaded
+ */
+setTimeout(() => {
+    timeout = true; 
+    appLoaded && removeLoading(); 
+}, 4999);
+
+/**
+ * Define an event to listen for the "removeLoading" message and 
+ * run the removeLoading function if the application is already loaded and 
+ * the timeout has been reached
+ * 
+ * Note: Fire this event during app assembly (src/main.ts file)
+ * 
+ * @param event 
+ * 
+ * Example:
+ * //main.ts
+ *  ....
+ *  createApp(App)
+ *      .mount('#app')
+ *      .$nextTick(() => postMessage({ payload: 'removeLoading' }, '*') );
+ * 
+ */
+window.onmessage = (event) => {
+    if (event.data.payload === 'removeLoading') {
+        appLoaded = true; 
+        /**
+         * execute the removeLoading function if timeout is true 
+         * (that is, if the timeout has already been reached)
+         */
+        timeout && removeLoading(); 
+    }
+};
 
