@@ -38,11 +38,11 @@
     "make:release": "node ./cmd/modules/release/index.js"
   },
   "dependencies": {
-    "vue": "^3.2.47"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
-    "electron": "^24.1.2",
+    "electron": "^24.7.1",
     "electron-builder": "^24.2.1",
     "electron-devtools-installer": "^3.2.0",
     "sass": "^1.62.0",
