@@ -1,7 +1,7 @@
 {
   "name": "electron-vuevite-quick-start",
   "productName": "Electron VueVite - Quick Start",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Your awesome app description",
   "main": "build/electron/main.js",
   "author": {

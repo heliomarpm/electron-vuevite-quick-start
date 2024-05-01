@@ -42,7 +42,7 @@ jobs:
         run: sudo apt-get install libarchive-tools rpm
 
       - name: Build Electron App
-        uses: heliomarpm/action-electron-builder@v2.1
+        uses: heliomarpm/action-electron-builder@2.1
         with:
           max_attempts: 3
           github_token: ${{ secrets.github_token }}
@@ -50,7 +50,7 @@ jobs:
 
       - name: Build Electron App Win32
         if: startsWith(matrix.os, 'windows-latest')
-        uses: heliomarpm/action-electron-builder@v2.1
+        uses: heliomarpm/action-electron-builder@2.1
         with:
           args: --ia32
           max_attempts: 3
