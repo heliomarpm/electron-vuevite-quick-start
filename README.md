@@ -20,7 +20,7 @@
     <img alt="pixme url" src="https://img.shields.io/badge/donate%20on-pixme-1C1E26?style=for-the-badge&labelColor=1C1E26&color=28f4f4"/>
   </a>
   <!-- PayPal -->
-  <a href="https://bit.ly/paypal-support-heliomarpm" target="_blank" rel="noopener noreferrer">
+  <a href="https://bit.ly/paypal-sponsor-heliomarpm" target="_blank" rel="noopener noreferrer">
     <img alt="paypal url" src="https://img.shields.io/badge/paypal-1C1E26?style=for-the-badge&labelColor=1C1E26&color=0475fe"/>
   </a>
   <!-- Ko-fi -->
@@ -179,7 +179,7 @@ If you appreciate that, please consider donating to the Developer.
     <img alt="pixme url" src="https://img.shields.io/badge/donate%20on-pixme-1C1E26?style=for-the-badge&labelColor=1C1E26&color=28f4f4"/>
   </a>
   <!-- PayPal -->
-  <a href="https://bit.ly/paypal-support-heliomarpm" target="_blank" rel="noopener noreferrer">
+  <a href="https://bit.ly/paypal-sponsor-heliomarpm" target="_blank" rel="noopener noreferrer">
     <img alt="paypal url" src="https://img.shields.io/badge/paypal-1C1E26?style=for-the-badge&labelColor=1C1E26&color=0475fe"/>
   </a>
   <!-- Ko-fi -->
