@@ -38,7 +38,7 @@
     "make:release": "node ./cmd/modules/release/index.js"
   },
   "dependencies": {
-    "vue": "^3.4.26"
+    "vue": "^3.4.27"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
