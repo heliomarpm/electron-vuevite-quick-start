@@ -1,5 +1,5 @@
-<span id="top"></span>
-<h1 align="center">
+<div id="top" align="center" style="text-align:center;">
+<h1>
   <img src="./public/logo.png" alt="electron-vue" width="428" />
   <br> Electron Quick Start - Vue+Vite+TypeScript+Sass
 
@@ -11,10 +11,9 @@
   ![vue version](https://img.shields.io/github/package-json/dependency-version/heliomarpm/electron-vuevite-quick-start/vue)
   ![typescript version](https://img.shields.io/github/package-json/dependency-version/heliomarpm/electron-vuevite-quick-start/dev/typescript)
   ![electron vite version](https://img.shields.io/github/package-json/dependency-version/heliomarpm/electron-vuevite-quick-start/dev/sass)
-  
 </h1>
 
-<p align="center">
+<p>
   <!-- PixMe -->
   <a href="https://www.pixme.bio/heliomarpm" target="_blank" rel="noopener noreferrer">
     <img alt="pixme url" src="https://img.shields.io/badge/donate%20on-pixme-1C1E26?style=for-the-badge&labelColor=1C1E26&color=28f4f4"/>
@@ -40,7 +39,7 @@
     <img alt="license url" src="https://img.shields.io/badge/license%20-MIT-1C1E26?style=for-the-badge&labelColor=1C1E26&color=61ffca"/>
   </a>
 </p>
-
+</div>
 
 Clone and run for a quick way to see Electron in action.
 
