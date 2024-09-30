@@ -35,7 +35,7 @@
     "dev": "vite dev",
     "build": "vue-tsc && vite build && electron-builder",
     "preview": "vite preview",
-    "deploy": "node ./cmd/modules/release/index.mjs"
+    "deploy": "node ./node_modules/gh_deploy/index.mjs"
   },
   "dependencies": {
     "vue": "^3.5.10"
@@ -45,6 +45,7 @@
     "electron": "^32.1.2",
     "electron-builder": "^25.0.5",
     "electron-devtools-installer": "^3.2.0",
+    "gh_deploy": "github:heliomarpm/gh_deploy",
     "open": "^10.1.0",
     "sass": "^1.79.4",
     "semver": "^7.6.3",
