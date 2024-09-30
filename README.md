@@ -129,7 +129,7 @@ To release your app on a GitHub release with `Windows`, `Mac` and `Linux` binari
 
 ```bash
 git pull
-npm run make:release
+npm run deploy
 ```
 
 > **Note**: Script for make release is contribution by @daltonmenezes
