@@ -2,7 +2,7 @@
  * The preload script runs before. It has access to web APIs
  * as well as Electron's renderer process modules and some
  * polyfilled Node.js functions.
- * 
+ *
  * https://www.electronjs.org/docs/latest/tutorial/sandbox
  */
 
@@ -100,39 +100,39 @@ let appLoaded = false;
 let timeout = false;
 
 /**
- * Set a timeout for loading the application and 
+ * Set a timeout for loading the application and
  * call the removeLoading function if the application is already loaded
  */
 setTimeout(() => {
-    timeout = true; 
-    appLoaded && removeLoading(); 
-}, 4999);
+    timeout = true;
+    appLoaded && removeLoading();
+}, 4000);
 
 /**
- * Define an event to listen for the "removeLoading" message and 
- * run the removeLoading function if the application is already loaded and 
+ * Define an event to listen for the "removeLoading" message and
+ * run the removeLoading function if the application is already loaded and
  * the timeout has been reached
- * 
+ *
  * Note: Fire this event during app assembly (src/main.ts file)
- * 
- * @param event 
- * 
+ *
+ * @param event
+ *
  * Example:
  * //main.ts
  *  ....
  *  createApp(App)
  *      .mount('#app')
  *      .$nextTick(() => postMessage({ payload: 'removeLoading' }, '*') );
- * 
+ *
  */
 window.onmessage = (event) => {
     if (event.data.payload === 'removeLoading') {
-        appLoaded = true; 
+        appLoaded = true;
         /**
-         * execute the removeLoading function if timeout is true 
+         * execute the removeLoading function if timeout is true
          * (that is, if the timeout has already been reached)
          */
-        timeout && removeLoading(); 
+        timeout && removeLoading();
     }
 };
 
