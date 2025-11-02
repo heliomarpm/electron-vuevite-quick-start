@@ -105,7 +105,7 @@ let timeout = false;
  */
 setTimeout(() => {
     timeout = true;
-    appLoaded && removeLoading();
+    if (appLoaded) removeLoading();
 }, 4000);
 
 /**
@@ -132,7 +132,7 @@ window.onmessage = (event) => {
          * execute the removeLoading function if timeout is true
          * (that is, if the timeout has already been reached)
          */
-        timeout && removeLoading();
+        if (timeout) removeLoading();
     }
 };
 
