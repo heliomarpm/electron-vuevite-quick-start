@@ -23,19 +23,20 @@ export default defineConfig(({ command, mode }) => {
         "@": `${__dirname}/src`,
       },
     },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "src/styles/variables.scss";'
-        }
-      }
-    },
+    // css: {
+    //   preprocessorOptions: {
+    //     scss: { 
+		// 			api: 'modern-compiler',         
+		// 			importers: [new NodePackageImporter()],
+    //     }
+    //   }
+    // },
     build: {
       outDir: 'build/app',
       emptyOutDir: true,
     },
     plugins: [
-      vue(),
+			vue(),
       electron([
         {
           entry: 'electron/main.ts',
