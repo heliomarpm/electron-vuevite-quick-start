@@ -1,7 +1,7 @@
 {
   "name": "electron-vuevite-quick-start",
   "productName": "Electron VueVite - Quick Start",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Your awesome app description",
   "main": "build/electron/main.js",
   "author": {
@@ -33,10 +33,11 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "vite dev",
+    "prebuild": "rimraf -rf build dist",
     "build": "vue-tsc && vite build && electron-builder",
     "preview": "vite preview",
     "deploy": "node ./node_modules/gh_deploy/index.mjs",
-    "clean": "rm -rf node_modules build dist"
+    "clean": "rimraf -rf build dist node_modules"
   },
   "dependencies": {
     "vue": "^3.5.22"
@@ -47,8 +48,7 @@
     "electron-builder": "^26.0.12",
     "electron-devtools-installer": "^4.0.0",
     "gh_deploy": "github:heliomarpm/gh_deploy",
-    "open": "^10.2.0",
-    "semver": "^7.7.3",
+    "rimraf": "^6.1.0",
     "typescript": "^5.9.3",
     "vite": "^7.1.12",
     "vite-plugin-electron": "^0.29.0",
