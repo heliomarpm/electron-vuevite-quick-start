@@ -6,32 +6,32 @@
  * https://www.electronjs.org/docs/latest/tutorial/sandbox
  */
 
-function domReady(condition: DocumentReadyState[] = ['complete', 'interactive']) {
-    return new Promise((resolve) => {
-        if (condition.includes(document.readyState)) {
-            resolve(true)
-        } else {
-            document.addEventListener('readystatechange', () => {
-                if (condition.includes(document.readyState)) {
-                    resolve(true)
-                }
-            })
-        }
-    })
+function domReady(condition: DocumentReadyState[] = ["complete", "interactive"]) {
+	return new Promise((resolve) => {
+		if (condition.includes(document.readyState)) {
+			resolve(true);
+		} else {
+			document.addEventListener("readystatechange", () => {
+				if (condition.includes(document.readyState)) {
+					resolve(true);
+				}
+			});
+		}
+	});
 }
 
 const safeDOM = {
-    append(parent: HTMLElement, child: HTMLElement) {
-        if (!Array.from(parent.children).find(e => e === child)) {
-            return parent.appendChild(child)
-        }
-    },
-    remove(parent: HTMLElement, child: HTMLElement) {
-        if (Array.from(parent.children).find(e => e === child)) {
-            return parent.removeChild(child)
-        }
-    },
-}
+	append(parent: HTMLElement, child: HTMLElement) {
+		if (!Array.from(parent.children).find((e) => e === child)) {
+			return parent.appendChild(child);
+		}
+	},
+	remove(parent: HTMLElement, child: HTMLElement) {
+		if (Array.from(parent.children).find((e) => e === child)) {
+			return parent.removeChild(child);
+		}
+	},
+};
 
 /**
  * https://tobiasahlin.com/spinkit
@@ -40,8 +40,8 @@ const safeDOM = {
  * https://matejkustec.github.io/SpinThatShit
  */
 function useLoading() {
-    const className = `loaders-css__square-spin`
-    const styleContent = `
+	const className = `loaders-css__square-spin`;
+	const styleContent = `
   @keyframes square-spin {
     25% { transform: perspective(100px) rotateX(180deg) rotateY(0); }
     50% { transform: perspective(100px) rotateX(180deg) rotateY(180deg); }
@@ -67,32 +67,31 @@ function useLoading() {
     background: #282c34;
     z-index: 9;
   }
-      `
-    const oStyle = document.createElement('style')
-    const oDiv = document.createElement('div')
+      `;
+	const oStyle = document.createElement("style");
+	const oDiv = document.createElement("div");
 
-    oStyle.id = 'app-loading-style'
-    oStyle.innerHTML = styleContent
-    oDiv.className = 'app-loading-wrap'
-    oDiv.innerHTML = `<div class="${className}"><div></div></div>`
+	oStyle.id = "app-loading-style";
+	oStyle.innerHTML = styleContent;
+	oDiv.className = "app-loading-wrap";
+	oDiv.innerHTML = `<div class="${className}"><div></div></div>`;
 
-    return {
-        appendLoading() {
-            safeDOM.append(document.head, oStyle)
-            safeDOM.append(document.body, oDiv)
-        },
-        removeLoading() {
-            safeDOM.remove(document.head, oStyle)
-            safeDOM.remove(document.body, oDiv)
-        },
-    }
+	return {
+		appendLoading() {
+			safeDOM.append(document.head, oStyle);
+			safeDOM.append(document.body, oDiv);
+		},
+		removeLoading() {
+			safeDOM.remove(document.head, oStyle);
+			safeDOM.remove(document.body, oDiv);
+		},
+	};
 }
 
 // ----------------------------------------------------------------------
 
-const { appendLoading, removeLoading } = useLoading()
-domReady().then(appendLoading)
-
+const { appendLoading, removeLoading } = useLoading();
+domReady().then(appendLoading);
 
 /**  ---------- Remove Loading ----------- */
 // Control variables to remove Loading
@@ -104,8 +103,8 @@ let timeout = false;
  * call the removeLoading function if the application is already loaded
  */
 setTimeout(() => {
-    timeout = true;
-    if (appLoaded) removeLoading();
+	timeout = true;
+	if (appLoaded) removeLoading();
 }, 4000);
 
 /**
@@ -126,13 +125,12 @@ setTimeout(() => {
  *
  */
 window.onmessage = (event) => {
-    if (event.data.payload === 'removeLoading') {
-        appLoaded = true;
-        /**
-         * execute the removeLoading function if timeout is true
-         * (that is, if the timeout has already been reached)
-         */
-        if (timeout) removeLoading();
-    }
+	if (event.data.payload === "removeLoading") {
+		appLoaded = true;
+		/**
+		 * execute the removeLoading function if timeout is true
+		 * (that is, if the timeout has already been reached)
+		 */
+		if (timeout) removeLoading();
+	}
 };
-
