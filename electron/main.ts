@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { app, BrowserWindow, shell, screen, session } from 'electron';
 import { join } from 'path';
 import { productName, description, version } from "../package.json";
@@ -63,7 +64,7 @@ function createWindow() {
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(async () => {
     if (process.env.VITE_DEV_SERVER_URL) {
-        // Install Vue Devtools  
+        // Install Vue Devtools
         try {
             await installExtension(VUEJS_DEVTOOLS);
         } catch (e) {
