@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/prettierrc",
 	"arrowParens": "always",
 	"bracketSameLine": false,
 	"bracketSpacing": false,
@@ -6,7 +7,7 @@
 	"htmlWhitespaceSensitivity": "strict",
 	"insertPragma": false,
 	"jsxSingleQuote": false,
-	"printWidth": 100,
+	"printWidth": 160,
 	"proseWrap": "preserve",
 	"quoteProps": "as-needed",
 	"requirePragma": false,
@@ -16,5 +17,6 @@
 	"tabWidth": 4,
 	"trailingComma": "es5",
 	"useTabs": true,
-	"vueIndentScriptAndStyle": true
+	"vueIndentScriptAndStyle": true,
+	"endOfLine": "lf"
 }
