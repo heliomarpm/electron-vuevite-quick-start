@@ -13,7 +13,6 @@ export default defineConfigWithVueTs(
 		name: 'app/files-to-lint',
 		files: ['**/*.{ts,mts,tsx,vue}'],
 		rules: {
-			...vueTsConfigs.rules,
 			semi: ["error", "always"],
 			quotes: ["error", "double"],
 			"comma-spacing": [
@@ -30,18 +29,20 @@ export default defineConfigWithVueTs(
 					multiline: { max: 4 },
 				},
 			],
-			"vue/multi-word-component-names": "off", // Desativa nomes multi-palavra
-			"no-unused-vars": "warn", // Aviso para variáveis não usadas
-			"no-console": process.env.NODE_ENV === "production" ? "warn" : "off", // Console permitido em dev
+			"no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
+			"no-unused-vars": "warn",
+			"no-empty-function": "error",
+			"vue/no-v-html": "error",
+			"vue/v-on-event-hyphenation": "warn",
+			"vue/attribute-hyphenation": "warn",
+			"vue/require-default-prop": "off",
+			"vue/no-required-prop-with-default": "off",
+			"vue/multi-word-component-names": "warn", // Allow single-word component names
 			"@typescript-eslint/no-unused-vars": "warn",
 			"@typescript-eslint/no-explicit-any": "warn",
-			"vue/multi-word-component-names": "off",
-			"vue/attribute-hyphenation": "off",
-			"vue/no-v-html": "off",
-			"vue/v-on-event-hyphenation": "off",
-			"@typescript-eslint/ban-ts-comment": "off",
-			"@typescript-eslint/no-require-imports": "off",
-			"@typescript-eslint/no-explicit-any": "off",
+			"@typescript-eslint/no-require-imports": "warn",
+			"@typescript-eslint/no-non-null-assertion": "warn",
+			"@typescript-eslint/ban-ts-comment": "warn",
 		},
 	},
 
