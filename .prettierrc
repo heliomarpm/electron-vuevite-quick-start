@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/prettierrc",
 	"arrowParens": "always",
-	"bracketSameLine": false,
-	"bracketSpacing": false,
+	"bracketSameLine": true,
+	"bracketSpacing": true,
 	"embeddedLanguageFormatting": "auto",
 	"htmlWhitespaceSensitivity": "strict",
 	"insertPragma": false,
